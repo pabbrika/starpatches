@@ -1,22 +1,87 @@
+:root {
+    --pale-purple: rgb(228, 206, 237);
+    --dark-purple: rgb(50, 31, 73);
+    --header-shadow: #d359ae;
+    --pink: #ff7fd9;
+}
+
+@font-face {
+    font-family: "Lora";
+    src: url(Lora-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "Esteban";
+    src: url(Esteban-Regular.ttf);
+}
+
 * {
     box-sizing: border-box;
 }
 
 body {
     width: 100%;
+    height: 100vh;
+    padding-inline: 15px;
+    background-color: rgb(50, 31, 73);
+    background-image: url(../images/darkpurple.webp);
+    background-size: cover;
+    backdrop-filter: brightness(0.6) saturate(1.3);
+    overflow-x: hidden;
+    font-family: "Lora", Georgia, 'Times New Roman', serif;
+    color: var(--pale-purple);
 }
 
 header {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    width: 200px;
+    margin: auto;
+    transform: rotate(-5deg);
+    margin-bottom: -2rem;
+    z-index: 1;
+    gap: 0;
+    filter: drop-shadow(0px 0px 10px var(--pink));
+    position: relative;
 }
+
+.star {
+    background-color: var(--header-shadow);
+    background-image: url(../images/mizisua-blink-gone.webp);
+    background-size: 190%;
+    background-position: 20% 0%;
+    width: 200px; /* adjust to control the size */
+    aspect-ratio: 1;
+    clip-path: polygon(91.18% 78.36%,59.98% 78.29%,35.75% 97.93%,26.18% 68.24%,0.02% 51.26%,25.29% 32.98%,33.36% 2.85%,58.55% 21.24%,89.7% 19.6%,79.99% 49.25%);
+    transform: rotate(5deg);
+    transition: all 0.3s ease-in-out;
+}
+
+.star:hover {
+    width: 250px;
+    background-size: 180%;
+    transform: rotate(-5deg);
+    transition: all 0.3s ease-in-out;
+}
+
+header h1 {
+    font-family: "Lora", Georgia, 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 2rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-shadow: 2px 2px 0px var(--header-shadow),2px -2px 0px var(--header-shadow),-2px 2px 0px var(--header-shadow), 2px 0px 0px var(--header-shadow), 0px 2px 0px var(--header-shadow),-2px 0px 0px var(--header-shadow),0px -2px 0px var(--header-shadow), 0px 0px 5px var(--pink);
+    color: rgb(245, 233, 250);
+}
+
 
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .socials-container {
@@ -25,21 +90,48 @@ main {
     grid-template-rows: repeat(2, 1fr);
     gap: 2rem;
     width: 100%;
+    max-width: 425px;
+    background-color: #00000050;
+    padding-inline: 25px;
+    padding-block: 35px;
+    filter: drop-shadow(0px 0px 5px rgb(106, 41, 90));
+    border-radius: 10px;
+    border: 1px solid rgba(255, 164, 240, 0.6);
 }
 
 a {
     display: block;
     text-align: center;
     text-decoration: none;
+    color: var(--pale-purple);
+    filter: drop-shadow(0px 0px 5px var(--pink));
 }
 
 a>svg {
-    width: 150px;
-    height: 150px;
+    width: 80px;
+    height: 80px;
+    fill: var(--pale-purple);
+}
+
+a:hover {
+    filter: drop-shadow(0px 0px 5px var(--pink)) drop-shadow(0px 0px 10px #ff7fd970);
 }
 
 .kofi {
-    background-color: pink;
+    background-color: #00000050;
     padding: 20px;
     border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    filter: drop-shadow(0px 0px 5px rgb(106, 41, 90));
+    border: 1px solid rgba(255, 164, 240, 0.6);
+    text-shadow: 0px 0px 5px var(--pink);
+}
+
+.kofi svg {
+    width: 40px;
+    height: 40px;
+    fill: var(--pale-purple);
+    filter: drop-shadow(0px 0px 5px var(--pink));
 }
