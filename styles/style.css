@@ -113,7 +113,7 @@ a>svg {
     fill: var(--pale-purple);
 }
 
-a:hover {
+.socials-container a:hover {
     filter: drop-shadow(0px 0px 5px var(--pink)) drop-shadow(0px 0px 10px #ff7fd970);
 }
 
@@ -127,6 +127,14 @@ a:hover {
     filter: drop-shadow(0px 0px 5px rgb(106, 41, 90));
     border: 1px solid rgba(255, 164, 240, 0.6);
     text-shadow: 0px 0px 5px var(--pink);
+}
+
+.kofi:hover {
+    text-shadow: 0px 0px 5px var(--pink), 0px 0px 10px #ff7fd9;
+}
+
+.kofi:hover svg {
+    filter: drop-shadow(0px 0px 5px var(--pink)) drop-shadow(0px 0px 10px #ff7fd970);
 }
 
 .kofi svg {
